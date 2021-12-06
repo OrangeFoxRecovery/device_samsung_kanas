@@ -54,6 +54,11 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export OF_USE_SYSTEM_FINGERPRINT=1
     export OF_CHECK_OVERWRITE_ATTEMPTS=1
 
+    # kanas Specific
+    export FOX_RECOVERY_INSTALL_PARTITION="/dev/block/platform/sprd-sdhci.3/by-name/RECOVERY"
+    export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/platform/sprd-sdhci.3/by-name/system"
+    export FOX_RECOVERY_BOOT_PARTITION="/dev/block/platform/sprd-sdhci.3/by-name/KERNEL"
+
     # About Settings
     export OF_MAINTAINER="Sushrut Gupta"
     export FOX_VERSION="R11.1_1"
